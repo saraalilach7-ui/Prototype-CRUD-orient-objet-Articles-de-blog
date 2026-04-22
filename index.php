@@ -1,20 +1,33 @@
+<<<<<<< HEAD
 <?php
 require_once '../models/Article.php';
 
 $article = new Article();
 $articles = $article->readAll();
+=======
+
+<?php
+require 'article.php';
+
+$article1 = new Article();
+$articles = $article1->readAll();
+>>>>>>> 03799088879e7dcd61dc5951044edeca76cbb99f
 ?>
 
 <h2>Liste des articles</h2>
 
+<<<<<<< HEAD
 <a href="create.php">Ajouter</a>
 
+=======
+>>>>>>> 03799088879e7dcd61dc5951044edeca76cbb99f
 <table border="1">
 <tr>
     <th>ID</th>
     <th>Titre</th>
     <th>Contenu</th>
     <th>Date</th>
+<<<<<<< HEAD
     <th>Actions</th>
 </tr>
 
@@ -32,3 +45,31 @@ $articles = $article->readAll();
 <?php endforeach; ?>
 
 </table>
+=======
+</tr>
+
+<?php foreach ($articles as $article): ?>
+<tr>
+    <td><?= htmlspecialchars($article['id']) ?></td>
+    <td><?= htmlspecialchars($article['titre']) ?></td>
+    <td><?= htmlspecialchars($article['contenu']) ?></td>
+    <td><?= htmlspecialchars($article['date_pub']) ?></td>
+</tr>
+<?php endforeach; ?>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 03799088879e7dcd61dc5951044edeca76cbb99f
